@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image" rel="icon" href="logo.jpg" />
+    <title>Home</title>
+
+<style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background: url(home1.gif);
+        background-color: black;
+        font-family: sans-serif;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        color: white;
+        overflow: hidden;
+        overflow-y: auto;
+      }
+      nav ul {
+        display: inline;
+        display: flex;
+        list-style: none;
+        font-size: 20px;
+        justify-content: center;
+        background-color: black;
+        text-align: center;
+        padding: 20px;
+      }
+      li a {
+        color: rgb(0, 255, 255);
+        text-decoration: none;
+        margin-left: 30px;
+        justify-content: space-evenly;
+        font-size: 25px;
+        color: aqua;
+        font-weight: 500;
+      }
+      li a:hover {
+        text-decoration: underline;
+        color: aqua;
+        transition: 0.5s ease;
+        text-shadow: 10px 10px 10px 10px aqua;
+        color: white;
+      }
+      .text h3 {
+        margin-top: 150px;
+        font-size: 35px;
+        color: white;
+        text-align: center;
+      }
+      .text h3:active {
+        color: aqua;
+        cursor: pointer;
+      }
+      .footer {
+        bottom: 0;
+        margin-bottom: 50px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        display: inline-block;
+        left: 0;
+        position: sticky;
+        width: 100%;
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+      .footer img:hover {
+        border-radius: 25px;
+        transition: 1s ease;
+      }
+      .footer img {
+        width: 40px;
+        height: 40px;
+      }
+      .foot {
+        bottom: 0;
+        margin-top: 300px;
+      }
+      ul img{
+        height:40px;
+        width:40px;
+        margin-right: 180px;
+        position: relative;
+      }
+      .logout{
+        height:30px;
+        width: 80px;
+        border: none;
+        border-radius: 15px;
+        margin-left: 150px;
+        color: rgb(0, 0, 0);
+        background:linear-gradient(aqua,cyan);
+        box-shadow: 0 0 20px aqua;
+        font-size: 15px;
+      }
+      .logout:hover{
+        box-shadow: 0 0 15px aqua,0 0 25px aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul>
+        <img src="logo.jpg" alt="logo">
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="topics.html">Topics</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="joinus.html">Join Us</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        <li><a href="feedback.php">Feedback</a></li>
+        <a href="login.html"><button class="logout">Log Out</button></a>
+      </ul>
+    </nav>
+    <div class="text">
+      <h3>
+        Dive into the ocean of knowlege @ Info.com<br /><br />
+        <q
+          >Unfurl the sails of your curiosity and navigate the vast universe of
+          information at info.com
+          <br />
+          Let info.com be the key that unlocks the treasure chest of
+          knowledge<br />
+          revealing jewels of information</q
+        >
+      </h3>
+    </div>
+    <div class="foot">
+      <footer class="footer">
+        <a href="https://www.linkedin.com">
+          <img src="linkedin.png" alt="LinkedIn" /> 
+        </a>
+        LinkedIn Id : AkileshGA<br /><br />
+        <a href="https://www.facebook.com">
+          <img src="facebook.png" alt="Facebook" /> 
+        </a>Facebook Id : AkileshGA<br /><br />
+        <a href="https://www.instagram.com">
+          <img src="instagram.jpeg" alt="Instagram" />
+        </a>
+        Instagram Id : akilesh.14<br /><br />
+        <a href="https://www.whatsapp.com">
+          <img src="whatsapp.png" alt="Contact" />
+        </a>Whatsapp : +91 1234567890
+      </footer>
+    </div>
+  </body>
+</html>

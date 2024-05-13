@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image" rel="icon" href="logo.jpg">
+    <title>Join Us</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        margin: auto;
+        width: 800px;
+      }
+      h3 {
+        font-size: 20px;
+        color: black;
+        text-align: center;
+      }
+      .login-container {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 35px;
+      }
+      .login-container:hover{
+        transform: scale(1.05);
+        box-shadow: 0 5px 25px 0 whitesmoke,
+        0 5px 25px 0 blue;
+        transition: 0.5s ease;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="text"],
+      input[type="text"],
+      textarea
+       {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid white;
+        border-radius: 15px;
+        box-sizing: border-box;
+      }
+      input[type="button"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: blue;
+        color: white;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-top: 10px;
+        color: black;
+        font-weight: bold;
+      }
+      input[type="button"]:hover {
+        background-color: aqua;
+      }
+    </style>
+    <script>
+      function validateform() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var phone = document.getElementById("phone").value;
+        var address = document.getElementById("address").value;
+
+        if (name === null || name === "") {
+          alert("UserName can't be blank");
+          return false;
+        } else if (!email.includes("@") || email === "") {
+          alert("Enter Email Address properly");
+          return false;
+        } else if (password.length < 8) {
+          alert("Password must contains 8 charecters");
+          return false;
+        }
+        else if (phone.length < 10) {
+          alert("Phone Number must contains 10 digits");
+          return false;
+        }
+        else if (address==""||address==null) {
+          alert("Fill Address properly");
+          return false;
+        } else {
+          confirm("Thanks for Joining with us !");
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h3>Join with Us</h3>
+      <form action="" method="post">
+        <input type="text" id="name" placeholder="UserName" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <input type="text" id="phone" placeholder="Phone" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="file" name="Upload Your Photo" placeholder="Upload Image" accept="" id="file" required>
+        Reason for joining with us
+        <label><textarea rows="5" cols="5"></textarea>
+        <input type="button" value="Join to info.com" name="Join to info.com" onclick="validateform()">
+      </form>
+    </div>
+  </body>
+</html>

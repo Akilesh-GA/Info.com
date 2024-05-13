@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image" rel="icon" href="logo.jpg">
+    <title>Sign In</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        margin: auto;
+        width: 800px;
+      }
+      h3 {
+        font-size: 20px;
+        color:black;
+        text-align: center;
+      }
+      .login-container {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+      }
+      .login-container:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 25px 0 whitesmoke, 0 5px 25px 0 blue;
+        transition: 0.5s ease;
+      }
+      input[type="text"],
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid white;
+        border-radius: 15px;
+        box-sizing: border-box;
+      }
+      input[type="button"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: blue;
+        color: white;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input[type="button"]:hover {
+        background-color: aqua;
+        color: black;
+      }
+    </style>
+    <script>
+      function validateform() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (fname === null || fname === "") {
+          alert("First name can't be blank");
+          return false;
+        }
+        if (lname === null || lname === "") {
+          alert("Lsat name can't be blank");
+          return false;
+        } else if (!email.includes("@") || email === "") {
+          alert("Enter Email Address properly");
+          return false;
+        } else if (password.length < 8) {
+          alert("Password must contains 8 charecters");
+          return false;
+        } else {
+          confirm("Successfully Signed In !");
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h3>Sign In</h3>
+      <form action="" method="post">
+        <input type="text" id="fname" placeholder="First Name" required />
+        <input type="text" id="lname" placeholder="Last Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <input type="date" name="dob" placeholder="DD-MM-YYYY" required />
+        <input
+          type="button"
+          value="Sign In to info.com"
+          name="Sign In to info.com"
+          onclick="validateform()"
+        />
+      </form>
+    </div>
+  </body>
+</html>

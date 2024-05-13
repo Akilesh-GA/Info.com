@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image" rel="icon" href="logo.jpg" />
+    <title>Login</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+        margin: auto;
+        width: 1200px;
+      }
+      h3 {
+        font-size: 20px;
+        color: black;
+        text-align: center;
+      }
+      .login-container {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+      }
+      .login-container:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 25px 0 whitesmoke, 0 5px 25px 0 blue;
+        transition: 0.5s ease;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid white;
+        border-radius: 15px;
+        box-sizing: border-box;
+      }
+      input[type="button"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: blue;
+        color: white;
+        border-radius: 25px;
+        cursor: pointer;
+        margin-top: 10px;
+        color: black;
+        font-weight: bold;
+      }
+      input[type="button"]:hover {
+        background-color: aqua;
+      }
+    </style>
+    <script>
+      function validateform() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+
+        if (name === null || name === "") {
+          alert("Username can't be blank"); 
+          return false;
+        } else if (!email.includes("@") || email === "") {
+          alert("Enter Email Address properly"); 
+          return false;
+        } else if (password.length < 8) {
+          alert("Password must contains 8 charecters");
+          return false;
+        } else {
+          confirm("Successfully Loged In !");
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h3>Log In</h3>
+      <form action="" method="post">
+        <input type="text" id="name" placeholder="Username" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <a href="home.html"
+          ><input
+            type="button"
+            value="Login to Info.com"
+            name="login"
+            onclick="return validateform()"
+        /></a>
+      </form>
+    </div>
+  </body>
+</html>

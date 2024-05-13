@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image" rel="icon" href="logo.jpg">
+    <title>Topics</title>
+    <style>
+      * {
+        margin: 5px;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: black;
+        font-family: sans-serif;
+      }
+      .head {
+        color: white;
+        font-size: 25px;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 15px;
+        width: 80%;
+        margin: auto;
+        background-color: black;
+        z-index: 1;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin: 5px;
+      }
+      .head {
+        color: aqua;
+        position: absolute;
+        z-index: 2;
+        width: 700px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 25px;
+        padding-left: 340px;
+      }
+      .i1:hover {
+        border-radius: 20px;
+        border: 3px solid aqua;
+        transition: 0.3s ease;
+      }
+      .i2:hover {
+        border-radius: 20px;
+        border: 5px solid aqua;
+        transition: 0.3s ease;
+      }
+      .i3:hover {
+        border-radius: 20px;
+        border: 5px solid aqua;
+        transition: 0.3s ease;
+      }
+      .i4:hover {
+        border-radius: 20px;
+        border: 5px solid aqua;
+        transition: 0.3s ease;
+      }
+      .i5:hover {
+        border-radius: 20px;
+        border: 5px solid aqua;
+        transition: 0.3s ease;
+      }
+      .i6:hover {
+        border-radius: 20px;
+        border: 5px solid aqua;
+        transition: 0.3s ease;
+      }
+      .i7:hover {
+        border-radius: 20px;
+        border: 5px solid aqua;
+        transition: 0.3s ease;
+      }
+      .i8:hover {
+        border-radius: 20px;
+        border: 5px solid aqua;
+        transition: 0.3s ease;
+      }
+      .btn {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        margin-top: 50px;
+      }
+      .btn a button{
+        height: 30px;
+        width: 150px;
+        margin-right: 550px;
+        margin-top: 50px;
+        border:none;
+        border-radius: 15px;
+        background: url(welcome6.gif);
+        color: white;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <h2>Explore</h2>
+    </div>
+    <div class="gallery">
+      <a href="html.html"><img class="i1" src="html.png" alt="image 2" /></a>
+      <a href="js.html"><img class="i2" src="js.png" alt="image 4" /></a>
+      <a href="php.html"><img class="i3" src="php2.png" alt="image 1" /></a>
+      <a href="mysql.html"><img class="i4" src="mysql2.png" alt="image 3" /></a>
+      <a href="css.html"><img class="i6" src="css.png" alt="image 3" /></a>
+      <a href="c.html"><img class="i5" src="c3.jpeg" alt="image 2" /></a>
+      <a href="python.html"><img class="i7" src="python.png" alt="image 1"/></a>
+      <a href="java.html"><img class="i8" src="java.jpeg" alt="image 4" /></a>
+    </div>
+    <div class="btn">
+      <a href="home.html"><button>Back to Home</button></a>
+    </div>
+  </body>
+</html>

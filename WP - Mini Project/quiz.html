@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image" rel="icon" href="logo.jpg" />
+    <title>Quiz</title>
+    <style>
+      body {
+        background-color: black;
+        padding: 0;
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 0px;
+        z-index: 10;
+      }
+      marquee h1 {
+        text-shadow: white 0 0 15px, aqua 0 0 15px, blue 0 0 15px, aqua 0 0 15px;
+      }
+      img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        margin-left: 550px;
+        margin-top: 150px;
+        z-index: 0;
+      }
+    </style>
+    <script>
+      const Questions = [
+        {
+          question: "What does HTML stand for?\n",
+          options: [
+            "Hyper Text Markup Language",
+            "High Text Markup Language",
+            "Hyper Tabular Markup Language",
+            "None of these\n",
+          ],
+          answer: "Hyper Text Markup Language",
+        },
+        {
+          question:
+            "Which property is used to change the background color in CSS?\n",
+          options: ["color", "background-color", "bgcolor", "background"],
+          answer: "background-color",
+        },
+        {
+          question: "How do you declare a variable in JavaScript?\n",
+          options: ["var a;", "int a;", "a;", "None of these\n"],
+          answer: "var a;",
+        },
+        {
+          question: "PHP developed by?\n",
+          options: [
+            "Rasmus Lerdorf",
+            "Tim Berners Lee",
+            "Sundar Pichai",
+            "None of these\n",
+          ],
+          answer: "Rasmus Lerdorf",
+        },
+        {
+          question: "Types of Comments in C?\n",
+          options: [
+            "/* Comment /",
+            "// Comment",
+            "# Comment",
+            "Both /* Comment */ and // Comment\n",
+          ],
+          answer: "Both /* Comment */ and // Comment",
+        },
+      ];
+
+      function Quiz(question) {
+        let score = 0;
+        question.forEach((question) => {
+          console.log(question.question);
+          question.options.forEach((option) => console.log(option));
+
+          var userAnswer = prompt(
+            question.question + "\n" + question.options.join("\n")
+          );
+
+          if (userAnswer === question.answer) {
+            alert("Correct!");
+            score++;
+          } else {
+            alert("Wrong!");
+          }
+        });
+
+        alert("Quiz completed!\nThank You !");
+      }
+      Quiz(Questions);
+    </script>
+  </head>
+  <body>
+    <a href="home.html"><img src="logo.jpg" alt="logo" /></a>
+    <marquee scrollamount="25"
+      ><h1>Thank You for your participation<br />from info.com</h1></marquee
+    >
+  </body>
+</html>
